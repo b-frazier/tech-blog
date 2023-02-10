@@ -37,3 +37,16 @@ app.use(session(sess));
 // tell express what template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+// express middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// tells express to use controllers
+app.use(routes);
+
+// sync and start the server
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});
