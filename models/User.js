@@ -11,6 +11,7 @@ class User extends Model {
 
 User.init(
   {
+    // this is the data associated w the user
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -38,6 +39,7 @@ User.init(
     },
   },
   {
+    // this hashes the password
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
