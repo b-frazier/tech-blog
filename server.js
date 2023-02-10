@@ -30,3 +30,10 @@ const sess = {
     db: sequelize,
   }),
 };
+
+// use the session we just configured
+app.use(session(sess));
+
+// tell express what template engine to use
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
