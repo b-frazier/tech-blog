@@ -36,3 +36,6 @@ const deleteBtn = async (e) => {
     }
   }
 };
+
+document.querySelector('.new-post').addEventListener('submit', newPost);
+document.querySelector('.post-list').addEventListener('click', deleteBtn);
