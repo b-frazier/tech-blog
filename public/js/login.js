@@ -43,5 +43,18 @@ const signUpForm = async (e) => {
   }
 };
 
+const showPassword = () => {
+  const passwordBox = document.querySelector('#password-signup');
+  if (passwordBox.type === 'password') {
+    passwordBox.type = 'text';
+  } else {
+    passwordBox.type = 'password';
+  }
+};
+
+document
+  .querySelector('#password-btn')
+  .addEventListener('mousedown', showPassword);
+
 document.querySelector('.login-form').addEventListener('submit', loginForm);
 document.querySelector('.signup-form').addEventListener('submit', signUpForm);
