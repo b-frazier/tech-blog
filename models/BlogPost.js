@@ -16,7 +16,7 @@ BlogPost.init(
       allowNull: false,
     },
     post_body: {
-      type: DataTypes.LONGTEXT,
+      type: DataTypes.TEXT,
     },
     date_created: {
       type: DataTypes.DATE,
