@@ -33,9 +33,9 @@ router.post('/login', async (req, res) => {
       return;
     }
     // this checks if the password corresponds to user data
-    const vaildPassowrd = await userData.checkPassword(req.body.password);
+    const validPassword = await userData.checkPassword(req.body.password);
 
-    if (!vaildPassowrd) {
+    if (!validPassword) {
       res.status(400).json({
         message: 'Incorrect login, try again!',
       });
