@@ -1,86 +1,92 @@
-<div>
-  <div>
-    <h2>LOGIN</h2>
+<div class='container d-flex justify-content-around'>
+  <div class='col px-4'>
+    <div class='col'>
 
-    <form class='login-form'>
-      <div class='input-group mb-3'>
-        {{! <label for='email-login'>EMAIL:</label> }}
-        <input
-          class='form-control'
-          type='text'
-          placeholder='Email'
-          name='email'
-          id='email-login'
-        />
-      </div>
-      <div class='input-group mb-3'>
-        {{! <label for='password-login'>PASSWORD:</label> }}
-        <input
-          class='form-control'
-          type='password'
-          placeholder='Password'
-          name='password'
-          id='password-login'
-        />
-      </div>
-      <div>
-        <button type='submit'>LOGIN</button>
-      </div>
-    </form>
+      <h2>LOGIN</h2>
+
+      <form class='login-form'>
+        <div class='input-group mb-3'>
+          {{! <label for='email-login'>EMAIL:</label> }}
+          <input
+            class='form-control'
+            type='text'
+            placeholder='Email'
+            name='email'
+            id='email-login'
+          />
+        </div>
+        <div class='input-group mb-3'>
+          {{! <label for='password-login'>PASSWORD:</label> }}
+          <input
+            class='form-control'
+            type='password'
+            placeholder='Password'
+            name='password'
+            id='password-login'
+          />
+        </div>
+        <div>
+          <button type='submit' class='btn btn-success'>LOGIN</button>
+        </div>
+      </form>
+    </div>
   </div>
-  <div>
-    <h2>SIGN UP</h2>
+  <div class='col px-4'>
+    <div class='col'>
 
-    <form class='signup-form'>
-      <div class='input-group mb-3'>
-        {{! <label class='form-label' for='name-signup'>NAME</label> }}
-        <input
-          class='form-control'
-          placeholder='Name'
-          type='text'
-          name='email'
-          id='name-signup'
-        />
-      </div>
-      <div class='input-group mb-3'>
-        {{! <label class='form-label' for='email-signup'>EMAIL:</label> }}
-        <input
-          class='form-control'
-          placeholder='Email'
-          type='text'
-          name='email'
-          id='email-signup'
-        />
-      </div>
-      <div class='input-group mb-3'>
-        <input
-          type='password'
-          class='form-control'
-          id='password-signup'
-          placeholder='Password'
-          aria-label="Recipient's username"
-          aria-describedby='button-addon2'
-        />
-        <button
-          class='btn btn-outline-secondary'
-          type='button'
-          id='password-btn'
-          onclick='showPassword()'
-        >SHOW</button>
-      </div>
-      <div id='passwordHelpBlock' class='form-text'>
-        Your password must be 8-20 characters long, contain letters and numbers,
-        and must not contain spaces or emojis.
-      </div>
-      {{! <div>
+      <h2>SIGN UP</h2>
+
+      <form class='signup-form col'>
+        <div class='input-group mb-3'>
+          {{! <label class='form-label' for='name-signup'>NAME</label> }}
+          <input
+            class='form-control'
+            placeholder='Name'
+            type='text'
+            name='email'
+            id='name-signup'
+          />
+        </div>
+        <div class='input-group mb-3'>
+          {{! <label class='form-label' for='email-signup'>EMAIL:</label> }}
+          <input
+            class='form-control'
+            placeholder='Email'
+            type='text'
+            name='email'
+            id='email-signup'
+          />
+        </div>
+        <div class='input-group mb-3'>
+          <input
+            type='password'
+            class='form-control'
+            id='password-signup'
+            placeholder='Password'
+            aria-label="Recipient's username"
+            aria-describedby='button-addon2'
+          />
+          <button
+            class='btn btn-outline-secondary'
+            type='button'
+            id='password-btn'
+            onclick='showPassword()'
+          >SHOW</button>
+        </div>
+        <div id='passwordHelpBlock' class='form-text'>
+          Your password must be 8-20 characters long, contain letters and
+          numbers, and must not contain spaces or emojis.
+        </div>
+        {{! <div>
         <label for='password-signup'>PASSWORD:</label>
         <input type='password' name='password' id='password-signup' />
         <button id='password-btn' onclick='showPassword()'>SHOW PASSWORD</button>
       </div> }}
-      <div>
-        <button type='submit'>SIGN UP</button>
-      </div>
-    </form>
+        <div>
+          <button type='submit' class='btn btn-success'>SIGN UP</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
