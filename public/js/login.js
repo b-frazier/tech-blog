@@ -1,5 +1,3 @@
-const { join } = require('path');
-
 const loginForm = async (e) => {
   e.preventDefault();
 
