@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// finds posts by id and renders to page
 router.get('/blogpost/:id', async (req, res) => {
   try {
     const blogPostData = await BlogPost.findByPk(req.params.id, {
