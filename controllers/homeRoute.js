@@ -48,3 +48,22 @@ router.get('/blogpost/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// gets the profile of user when logged in
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: BlogPost }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('profile', {
+      ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
