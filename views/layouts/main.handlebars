@@ -13,17 +13,22 @@
   </head>
   <body>
     <div>
-      <header>
-        <h2><a href='/'>The Digital Frontier</a></h2>
-        <nav>
+      <nav class='navbar bg-light col'>
+        <div class='container col'>
+          <h2><a href='/'>The Digital Frontier</a></h2>
+        </div>
+        <div>
           {{#if logged_in}}
-            <a href='/profile'>PROFILE</a>
-            <button id='logout'>LOGOUT</button>
+            <button class='btn btn-outline-success'>
+              <a href='/profile'>PROFILE</a>
+            </button>
+            <button class='btn btn-outline-success' id='logout'>LOGOUT</button>
           {{else}}
             <a href='/login'>LOGIN</a>
           {{/if}}
-        </nav>
-      </header>
+        </div>
+      </nav>
+
       <main>
         {{{body}}}
       </main>
