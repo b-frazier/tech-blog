@@ -20,3 +20,19 @@ const newPost = async (e) => {
     }
   }
 };
+
+const deleteBtn = async (e) => {
+  if (e.target.hasAttribute('data-id')) {
+    const id = e.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/post/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to delete post!');
+    }
+  }
+};
