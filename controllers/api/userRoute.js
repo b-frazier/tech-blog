@@ -16,8 +16,10 @@ router.post('/', async (req, res) => {
   }
 });
 
+// this logs the user in
 router.post('/login', async (req, res) => {
   try {
+    // finds the users email
     const userData = await User.findOne({
       where: {
         email: req.body.email,
@@ -27,6 +29,15 @@ router.post('/login', async (req, res) => {
     if (!userData) {
       res.status(400).json({
         message: 'Incorrect login in, try again!',
+      });
+      return;
+    }
+    // this checks if the password corresponds to user data
+    const vaildPassowrd = await userData.checkPassword(req.body.password);
+
+    if (!vaildPassowrd) {
+      res.status(400).json({
+        message: 'Incorrect login, try again!',
       });
       return;
     }
@@ -45,6 +56,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// this logs user out if logged in
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
@@ -54,3 +66,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+module.exports = router;
