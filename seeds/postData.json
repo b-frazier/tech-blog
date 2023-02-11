@@ -1,0 +1,14 @@
+[
+  {
+    "post_title": "What is CSS?",
+    "post_body": "CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in a markup language, such as HTML. CSS is used to control the layout and presentation of web pages and other documents, providing a way to separate the content of a document from its visual appearance. With CSS, you can specify things like the font and color of text, the background color and image of a page, and the position and size of elements on the page. By using CSS, you can create consistent and attractive styles across multiple pages and improve the accessibility and usability of your website."
+  },
+  {
+    "post_title": "3 Ways to use ChatGPT",
+    "post_body": "1. Conversational AI: You can use ChatGPT as a conversational AI model to build chatbots or virtual assistants. The model can respond to text-based inputs in a human-like manner and can be integrated into a variety of platforms, including websites, messaging apps, and voice assistants.\n2. Question Answering: ChatGPT can be used as a Question Answering (QA) system. Given a question, the model can generate an answer based on its training data, which includes a vast amount of text from the internet. This makes it an ideal tool for information retrieval and can be used to build QA systems for various domains.\n3. Text Generation: ChatGPT can also be used for text generation tasks, such as writing creative fiction, composing poems, or summarizing long articles. The model has been trained on a large corpus of text, allowing it to generate coherent and diverse outputs based on a given prompt or seed text. With fine-tuning, the model can be adapted for specific use cases, such as generating marketing copy or writing headlines."
+  },
+  {
+    "post_title": "Is this the best electric car?",
+    "post_body": "The Chevrolet Bolt EUV (Electric Utility Vehicle) is an all-electric crossover SUV produced by General Motors under the Chevrolet brand. The Bolt EUV was first introduced in 2021 and is based on the same platform as the Chevrolet Bolt EV, but with a longer and more spacious body to accommodate five passengers comfortably. The Bolt EUV is powered by a 65 kWh battery pack that provides an estimated range of over 250 miles on a single charge. The vehicle features fast charging capabilities, allowing drivers to add up to 95 miles of range in just 30 minutes of charging. In terms of technology, the Bolt EUV comes with a range of advanced features, including a large infotainment system with touch screen, built-in navigation, and compatibility with Apple CarPlay and Android Auto. It also offers advanced safety features, such as automatic emergency braking and lane departure warning, making it a safe and convenient choice for electric vehicle buyers. For a price under $30,000, it just might be the best EV."
+  }
+]
