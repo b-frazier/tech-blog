@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = user.Data.id;
+      req.session.user_id = userData.id;
       req.session.logged_in = true;
 
       res.status(200).json(userData);
@@ -29,7 +29,7 @@ router.post('/login', async (req, res) => {
 
     if (!userData) {
       res.status(400).json({
-        message: 'Incorrect login in, try again!',
+        message: 'Incorrect login, try again!',
       });
       return;
     }
