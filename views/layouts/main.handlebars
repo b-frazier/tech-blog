@@ -15,16 +15,16 @@
     <div>
       <nav class='navbar bg-light col'>
         <div class='container col'>
-          <h2><a href='/'>The Digital Frontier</a></h2>
+          <h2><a href='/' class='text-decoration-none'>The Digital Frontier</a></h2>
         </div>
         <div>
           {{#if logged_in}}
-            <button class='btn btn-outline-success'>
+            <button class='btn btn-outline-success text-decoration-none'>
               <a href='/profile'>PROFILE</a>
             </button>
             <button class='btn btn-outline-success' id='logout'>LOGOUT</button>
           {{else}}
-            <a href='/login'>LOGIN</a>
+            <a href='/login' class='text-decoration-none'>LOGIN</a>
           {{/if}}
         </div>
       </nav>
