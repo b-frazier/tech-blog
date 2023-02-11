@@ -1,0 +1,29 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>The Digital Frontier</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h2><a href='/'>The Digital Frontier</a></h2>
+        <nav>
+          {{#if logged_in}}
+            <a href='/profile'>PROFILE</a>
+            <button id='logout'>LOGOUT</button>
+          {{else}}
+            <a href='/login'>LOGIN</a>
+          {{/if}}
+        </nav>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+    </div>
+    {{#if logged_in}}
+      <script src='/public/js/logout.js'></script>
+    {{/if}}
+  </body>
+</html>
