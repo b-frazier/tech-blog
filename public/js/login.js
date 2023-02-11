@@ -52,9 +52,5 @@ const showPassword = () => {
   }
 };
 
-document
-  .querySelector('#password-btn')
-  .addEventListener('mousedown', showPassword);
-
 document.querySelector('.login-form').addEventListener('submit', loginForm);
 document.querySelector('.signup-form').addEventListener('submit', signUpForm);
