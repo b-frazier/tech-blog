@@ -1,47 +1,49 @@
-<div>
-  <h2>Welcome, {{name}}</h2>
-</div>
-
-<div>
+<div class='container'>
   <div>
-    <h2>Add a new blog post</h2>
-    <form class='new-post'>
-      <div>
-        <input
-          class='form-control my-3'
-          placeholder='Post Title'
-          type='text'
-          name='post-title'
-          id='post-title'
-        />
-      </div>
-      <div>
-        <textarea
-          class='form-control'
-          name='post-body'
-          id='post-body'
-          cols='30'
-          rows='10'
-        ></textarea>
-      </div>
-      <button type='submit' class='btn btn-success my-3'>POST</button>
-    </form>
+    <h1 class='display-5'>Welcome, {{name}}</h1>
   </div>
 
-  {{#if blogPost.length}}
+  <div>
     <div>
-      <h2>Your posts</h2>
-
-      {{#each blogPost as |blogpost|}}
+      <p class='lead my-8'>Add a new blog post</p>
+      <form class='new-post'>
         <div>
-          <div>
-            <h3><a href='/post/{{blogpost.id}}'>{{blogpost.title}}</a></h3>
-          </div>
-          <div>
-            <button data-id='{{blogpost.id}}'>DELETE</button>
-          </div>
+          <input
+            class='form-control my-3'
+            placeholder='Post Title'
+            type='text'
+            name='post-title'
+            id='post-title'
+          />
         </div>
-      {{/each}}
+        <div>
+          <textarea
+            class='form-control'
+            name='post-body'
+            id='post-body'
+            cols='30'
+            rows='10'
+          ></textarea>
+        </div>
+        <button class='btn btn-success my-3'>POST</button>
+      </form>
     </div>
-  {{/if}}
+
+    {{#if user.BlogPosts.length}}
+      <div>
+        <h2>Your posts</h2>
+
+        {{#each posts as |post|}}
+          <div>
+            <div>
+              <h3><a href='/post/{{post.id}}'>{{post.post_title}}</a></h3>
+            </div>
+            <div>
+              <button data-id='{{post.id}}'>DELETE</button>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
 </div>
