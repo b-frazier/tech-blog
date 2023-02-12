@@ -12,7 +12,6 @@ const newPost = async (e) => {
         'Content-Type': 'application/json',
       },
     });
-
     if (response.ok) {
       document.location.replace('/profile');
     } else {
