@@ -1,18 +1,20 @@
-{{#each blogPosts as |blogpost|}}
-  <div>
-    <div>
-      <h3>
-        <a
-          class='text-decoration-none link-dark'
-          href='/post/{{blogpost.id}}'
-        >{{blogpost.post_title}}</a>
-      </h3>
-      <p>Posted by: {{user.name}}</p>
+<div class='container my-5'>
+  {{#each blogPosts as |blogpost|}}
+    <div class='card my-3'>
+      <div class='card-header'>
+        <h3>
+          <a
+            class='text-decoration-none link-dark'
+            href='/post/{{blogpost.id}}'
+          >{{blogpost.post_title}}</a>
+        </h3>
+        <p class='card-subtitle mb-2 text-muted'>Posted by: {{user.name}}</p>
+      </div>
+      <div class='card-body'>
+        <p>
+          {{blogpost.post_body}}
+        </p>
+      </div>
     </div>
-    <div>
-      <p>
-        {{blogpost.post_body}}
-      </p>
-    </div>
-  </div>
-{{/each}}
+  {{/each}}
+</div>
