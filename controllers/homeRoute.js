@@ -61,7 +61,6 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      posts: user.BlogPosts, // should let me access posts from user
       logged_in: true,
     });
   } catch (err) {
