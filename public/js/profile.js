@@ -1,8 +1,8 @@
 const newPost = async (e) => {
   e.preventDefault();
 
-  const post_title = document.querySelector('#post-title');
-  const post_body = document.querySelector('#post-body');
+  const post_title = document.querySelector('#post-title').value.trim();
+  const post_body = document.querySelector('#post-body').value.trim();
 
   if (post_title && post_body) {
     const response = await fetch('/api/post', {
@@ -36,5 +36,5 @@ const deleteBtn = async (e) => {
   }
 };
 
-document.querySelector('.new-post').addEventListener('submit', newPost);
+document.querySelector('.post-btn').addEventListener('click', newPost);
 document.querySelector('.post-list').addEventListener('click', deleteBtn);
