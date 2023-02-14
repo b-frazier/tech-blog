@@ -19,7 +19,7 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: 'pinky promise',
   cookie: {
-    maxAge: 30000,
+    maxAge: 300000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',
