@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { BlogPost, User } = require('../models');
+const { BlogPost, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // this will get all of the posts w/ user data and render to homepage
@@ -35,10 +35,18 @@ router.get('/post/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        {
+          model: Comment,
+          attributes: ['comment_body', 'user_id'],
+        },
       ],
     });
 
     const blogPost = blogPostData.get({ plain: true });
+    console.debug({ blogPost });
+    blogPost.comments.forEach((comment) => {
+      comment.user = blogPost.users.find((user) => user.id === comment.user_id);
+    });
 
     res.render('post', {
       ...blogPost,
