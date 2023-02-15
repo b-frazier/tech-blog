@@ -15,3 +15,6 @@ async function addComment(e) {
     console.log(response);
   }
 }
+
+const commentBtn = document.querySelector('#comment-btn');
+commentBtn.addEventListener('click', addComment);
