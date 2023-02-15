@@ -1,20 +1,26 @@
-const comment = document.querySelector('#comment').value.trim();
-console.log(comment);
-
-async function addComment(e) {
+const addComment = async (e) => {
   e.preventDefault();
 
-  if (comment) {
-    const response = await fetch(`/api/post`, {
+  const comment_body = document.querySelector('#comment-body').value.trim();
+  console.log(comment_body);
+
+  if (comment_body) {
+    const response = await fetch('/api/comment', {
       method: 'POST',
-      body: JSON.stringify({ comment }),
+      body: JSON.stringify({ comment_body }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-    console.log(response);
+    console.log('after fetch:', response);
+    if (response.ok) {
+      document.location.reload;
+    } else {
+      console.error();
+      //alert('It did not work');
+    }
   }
-}
+};
 
 const commentBtn = document.querySelector('#comment-btn');
 commentBtn.addEventListener('click', addComment);
