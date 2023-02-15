@@ -1,5 +1,29 @@
 <div class='container my-3'>
-  <h2>{{post_title}}</h2>
-  <p>{{post_body}}</p>
-  <p>Posted by: {{user.name}}</p>
+  <div>
+    <h2>{{post_title}}</h2>
+    <p>{{post_body}}</p>
+    <p>Posted by: {{user.name}}</p>
+  </div>
+  <div>
+    <form action=''>
+      <h6>Add a comment</h6>
+      <textarea
+        style='resize: none;'
+        class='form-control'
+        name='comment'
+        id='comment'
+        cols='30'
+        rows='4'
+      ></textarea>
+      <button
+        class='btn btn-success my-3'
+        type='submit'
+        id='comment=btn'
+      >POST</button>
+    </form>
+  </div>
+  <div>
+    <p>Comments:</p>
+    <div id='comment-list'></div>
+  </div>
 </div>
