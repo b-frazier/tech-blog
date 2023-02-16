@@ -4,26 +4,40 @@
     <p>{{post_body}}</p>
     <p>Posted by: {{user.name}}</p>
   </div>
-  <div>
-    <form action=''>
-      <h6>Add a comment</h6>
-      <textarea
-        style='resize: none;'
-        class='form-control'
-        name='comment'
-        id='comment'
-        cols='30'
-        rows='4'
-      ></textarea>
-      <button
-        class='btn btn-success my-3'
-        type='submit'
-        id='comment-btn'
-      >POST</button>
-    </form>
-  </div>
-  <div>
-    <p>Comments:</p>
-    <div id='comment-list'></div>
-  </div>
-</div>
+  {{#if logged_in}}
+    <div>
+      <form action=''>
+        <h6>Add a comment</h6>
+        <textarea
+          style='resize: none;'
+          class='form-control'
+          name='comment'
+          id='comment-body'
+          cols='30'
+          rows='4'
+        ></textarea>
+        <button
+          class='btn btn-success my-3'
+          type='button'
+          id='comment-btn'
+        >POST</button>
+      </form>
+    </div>
+    {{/if}}
+    {{#if comments.length}}
+      <div>
+        <p>Comments:</p>
+        <div id='comment-list'>
+          {{#each comments as |comment|}}
+            <div>
+              <p>{{comment.comment_body}}</p>
+              <p>Posted by: {{user.name}}</p>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  
+
+<script src='/js/comments.js'></script>
